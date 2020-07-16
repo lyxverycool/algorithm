@@ -103,4 +103,46 @@ function BFS(root, array = []) {
   return array
 }
 
-console.log(BFS(root))
+function getMin(root) {
+  while (root) {
+    if (!root.left) {
+      return root
+    }
+    root = root.left
+  }
+}
+
+function getMax(root) {
+  while (root) {
+    if (!root.right) {
+      return root
+    }
+    root = root.right
+  }
+}
+
+function getDeep(root, deep) {
+  deep = deep || 0
+  if (!root) return deep
+  deep++
+  var dleft = getDeep(root.left, deep)
+  var dright = getDeep(root.right, deep)
+  return Math.max(dleft, dright)
+}
+
+function getNode(root, key) {
+  while (root) {
+    console.log(key > root.key)
+    if (key < root.key) {
+      console.log(111)
+      return getNode(root.left, key)
+    } else if (key > root.key) {
+      return getNode(root.right, key)
+    } else {
+      return null
+    }
+  }
+  return null
+}
+
+console.log(getNode(root, 'C'))
