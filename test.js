@@ -1,8 +1,12 @@
-const next = () => 22
+let x = { c: 4 }
 
-const apiMiddleware = api => next => {
-  next(222)
-}
+let m = { a: x, b: 2 }
 
+let n = m
 
-console.log(apiMiddleware()())
+x.c = 9
+
+n = n.a
+
+console.log(m)
+console.log(n)

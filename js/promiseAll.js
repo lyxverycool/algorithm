@@ -1,13 +1,18 @@
 const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, 'foo');
-});
-const promise2 = new Promise((resolve,reject)=>{
-  reject(3)
+  setTimeout(() => {
+    resolve(222)
+  }, 1000)
 })
-const promise3 = 42;
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(222)
+  }, 2000)
+})
+
+function promise_all(arr) {
+
+}
 
 
-Promise.all([promise1, promise2, promise3]).then((values) => {
-  console.log(values);
-},err=>{console.log(err)});
-// expected output: Array [3, 42, "foo"]
+promise_all([promise1, promise2])
