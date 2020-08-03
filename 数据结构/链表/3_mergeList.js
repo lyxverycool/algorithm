@@ -4,7 +4,6 @@ const printList = require('./2_printList.js')
 function mergeList(l1, l2) {
   let head = new CreatListNode()
   let cur = head
-
   while (l1 && l2) {
     if (l1.val < l2.val) {
       cur.next = l1
@@ -15,9 +14,7 @@ function mergeList(l1, l2) {
     }
     cur = cur.next
   }
-
-  cur.next = l1 != null ? l1 : l2
-
+  cur.next = l1 ? l1 : l2
   return head.next
 }
 

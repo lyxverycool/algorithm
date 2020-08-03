@@ -1,12 +1,11 @@
-let x = { c: 4 }
+const n = { b: 4, c: { d: 4 } }
+function m(a) {
+  let x = { ...a }
+  x.b = 2
+  x.c.d = 8
+  console.log(x)
+}
 
-let m = { a: x, b: 2 }
+m(n)
 
-let n = m
-
-x.c = 9
-
-n = n.a
-
-console.log(m)
 console.log(n)
