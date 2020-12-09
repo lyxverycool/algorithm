@@ -11,8 +11,9 @@ nodelist_1.next.next = new CreatListNode(3)
 nodelist_1.next.next.next = new CreatListNode(4)
 
 let nodelist_2 = new CreatListNode(1)
-nodelist_2.next = new CreatListNode(4)
+nodelist_2.next = new CreatListNode(2)
 nodelist_2.next.next = new CreatListNode(4)
 nodelist_2.next.next.next = new CreatListNode(9)
+nodelist_2.next.next.next.next = new CreatListNode(11)
 
 module.exports = { CreatListNode, nodelist_1, nodelist_2 }

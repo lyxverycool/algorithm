@@ -5,7 +5,7 @@ const { nodelist_1 } = require('./1_create.js')
 function printList(listNode) {
   const arr = []
   while (listNode) {
-    arr.unshift(listNode.val)
+    arr.push(listNode.val)
     listNode = listNode.next
   }
   return arr

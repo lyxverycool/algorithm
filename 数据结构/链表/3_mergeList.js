@@ -1,6 +1,9 @@
 const { CreatListNode, nodelist_1, nodelist_2 } = require('./1_create.js')
 const printList = require('./2_printList.js')
 
+//想象有a.b两排扣子，我们用一条绳子穿过这些扣子，对n结点进行对比，如果a排 在n小于b则穿过b,三条线同时走，其中绳子每一步都在
+//往前走，a或者b如果是小的就停滞不前。最后如果一条走完了，把另一条剩余的放到绳子上、
+
 function mergeList(l1, l2) {
   let head = new CreatListNode()
   let cur = head
